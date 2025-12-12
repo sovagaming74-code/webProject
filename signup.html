@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GoalGetter - Sign Up</title>
+    <link rel="stylesheet" href="styles.css"> 
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="navbar__container">
+            <a href="index.html" id="navbar__logo">GoalGetter</a>
+            
+            <div class="navbar__toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            
+            <ul class="navbar__menu">
+                <li class="navbar__item">
+                    <a href="index.html" class="navbar__links" id="home-page">Home</a>
+                </li>
+                <li class="navbar__item">
+                    <a href="services.html" class="navbar__links" id="services-page">Services</a>
+                </li>
+                <li class="navbar__item">
+                    <a href="about.html" class="navbar__links" id="about-page">About</a>
+                </li>
+                <li class="navbar__btn">
+                    <a href="login.html" class="button" id="login">Log In</a>
+                </li>
+            </ul> 
+        </div>
+    </nav>
+
+    <div class="main" id="signup-page">
+        <div class="main__container">
+            
+            <div class="main__content">
+                <h1 class="fade-scale" style="animation-delay: 0.2s;">Start Now!</h1>
+                <h2 class="slide-left" style="animation-delay: 0.4s;">Create Your Free Account</h2>
+                <p class="slide-left" style="animation-delay: 0.6s;">Join GoalGetter today and achieve your dreams.</p>
+                <button class="main__btn pop-bounce" style="animation-delay: 0.8s;"><a href="services.html">View Services</a></button>
+            </div>
+            
+            <div class="main__img--container">
+                <div class="signup-form--card slide-right">
+                    <form class="signup-form">
+                        <h2>Get Started</h2>
+                        
+                        <div class="input-group">
+                            <label for="signup-name"><i class="fas fa-user-circle"></i> Username</label>
+                            <input type="text" id="signup-name" name="username" placeholder="Choose a username" required>
+                        </div>
+                        
+                        <div class="input-group">
+                            <label for="signup-email"><i class="fas fa-envelope"></i> Email</label>
+                            <input type="email" id="signup-email" name="email" placeholder="Enter your email" required>
+                        </div>
+                        
+                        <div class="input-group">
+                            <label for="signup-password"><i class="fas fa-lock"></i> Password</label>
+                            <input type="password" id="signup-password" name="password" placeholder="Create a password" required>
+                        </div>
+                        
+                        <button type="submit" class="form__submit--btn">Sign Up</button>
+                        
+                        <p class="login-prompt">
+                            Already have an account? <a href="login.html">Log In</a>
+                        </p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer__container">
+        <p>GoalGetter Footer Content</p>
+    </div>
+
+    <script src="web.js"></script>
+</body>
+</html>

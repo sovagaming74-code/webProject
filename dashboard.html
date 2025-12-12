@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GoalGetter - Dashboard</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="dashboard-styles.css">
+</head>
+<body>
+
+    <div class="dashboard-container">
+        <nav class="sidebar">
+            <div class="sidebar-header">
+                <h2 id="logo-text">GoalGetter</h2>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#scheduler"><i class="fa-solid fa-calendar-check"></i> Smart Schedule</a></li>
+                <li><a href="#tracker"><i class="fa-solid fa-fire"></i> Habit Tracker</a></li>
+                <li><a href="#progress"><i class="fa-solid fa-chart-pie"></i> Your Progress</a></li>
+                <li><a href="#categories"><i class="fa-solid fa-layer-group"></i> Categories</a></li>
+            </ul>
+            <div class="sidebar-footer">
+                <a href="services.html"><i class="fa-solid fa-arrow-left"></i> Back to Services</a>
+            </div>
+        </nav>
+
+        <main class="main-content">
+            
+            <section id="scheduler" class="view">
+                <div class="header-flex">
+                    <h1>Smart Schedule</h1>
+                    <button class="glass-btn">+ New Goal</button>
+                </div>
+                <div class="glass-card calendar-grid">
+                    <div class="time-col">9 AM</div><div class="slot busy">Meeting</div><div class="slot"></div><div class="slot"></div>
+                    <div class="time-col">10 AM</div><div class="slot smart-suggest">Study Coding</div><div class="slot"></div><div class="slot"></div>
+                    <div class="time-col">11 AM</div><div class="slot"></div><div class="slot"></div><div class="slot"></div>
+                </div>
+            </section>
+
+            <section id="tracker" class="view hidden">
+                <h1>Habit Tracking</h1>
+                <div class="habit-list">
+                    <div class="glass-card habit-item">
+                        <div class="habit-info">
+                            <h3>Read 30 Mins</h3>
+                            <p>Streak: 🔥 12 Days</p>
+                        </div>
+                        <div class="habit-days">
+                            <span class="dot done">M</span><span class="dot done">T</span><span class="dot done">W</span><span class="dot">T</span><span class="dot">F</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="progress" class="view hidden">
+                <h1>Your Progress</h1>
+                <div class="stats-grid">
+                    <div class="glass-card stat-box">
+                        <h3>Completion Rate</h3>
+                        <div class="circle-progress">85%</div>
+                    </div>
+                    <div class="glass-card stat-box">
+                        <h3>Goals Hit</h3>
+                        <p class="big-number">24</p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="categories" class="view hidden">
+                <h1>Categories</h1>
+                <div class="category-grid">
+                    <div class="glass-card cat-card school"><h3>School</h3><i class="fa-solid fa-book"></i></div>
+                    <div class="glass-card cat-card work"><h3>Work</h3><i class="fa-solid fa-briefcase"></i></div>
+                    <div class="glass-card cat-card health"><h3>Health</h3><i class="fa-solid fa-heart-pulse"></i></div>
+                </div>
+            </section>
+
+        </main>
+    </div>
+
+    <script src="dashboard.js"></script>
+    <script>
+    function handleViewChange() {
+        const hash = window.location.hash || '#scheduler';
+        const sections = document.querySelectorAll('.view');
+        const navLinks = document.querySelectorAll('.nav-links li');
+
+        // Hide all, then show the one from the URL
+        sections.forEach(section => {
+            section.classList.add('hidden');
+            if ('#' + section.id === hash) {
+                section.classList.remove('hidden');
+            }
+        });
+
+        // Highlight sidebar
+        navLinks.forEach(li => {
+            li.classList.remove('active');
+            if (li.querySelector('a').getAttribute('href') === hash) {
+                li.classList.add('active');
+            }
+        });
+    }
+
+    // Run when page loads and when hash changes
+    window.addEventListener('DOMContentLoaded', handleViewChange);
+    window.addEventListener('hashchange', handleViewChange);
+</script>
+</body>
+</html>

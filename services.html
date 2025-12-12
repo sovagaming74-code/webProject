@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GoalGetter - Services</title>
+    <link rel="stylesheet" href="styles.css"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+
+    <!--Navbar-->
+    <nav class="navbar">
+        <div class="navbar__container">
+            <a href="index.html" id="navbar__logo">GoalGetter</a>
+            
+            <div class="navbar__toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            
+            <ul class="navbar__menu">
+                <li class="navbar__item">
+                    <a href="index.html" class="navbar__links" id="home-page">Home</a>
+                </li>
+                <li class="navbar__item">
+                    <a href="services.html" class="navbar__links" id="services-page">Services</a>
+                </li>
+                <li class="navbar__item">
+                    <a href="about.html" class="navbar__links" id="about-page">About</a>
+                </li>
+                <li class="navbar__btn">
+                    <a href="signup.html" class="button" id="signup">Sign up</a>
+                </li>
+            </ul> 
+        </div>
+    </nav>
+
+    <!--Services Page Content-->
+    <div class="services" id="services">
+        <h1 class="pop-bounce">Our Services</h1>
+
+        <div class="services__wrapper">
+
+            <div class="services__card" data-feature="Smart Scheduling">
+                <div class="icon-box"><i class="fa-solid fa-calendar-check"></i></div>
+                <h2 class="pop-bounce">Smart Scheduling</h2>
+                <p>Set deadlines and never miss a goal.</p>
+                <div class="services__btn">
+                    <button class="get-started-btn">Get Started</button>
+                </div>
+            </div>
+
+            <div class="services__card" data-feature="Habit Tracking">
+                <div class="icon-box"><i class="fa-solid fa-chart-line"></i></div>
+                <h2 class="pop-bounce">Habit Tracking</h2>
+                <p>Build consistent daily routines.</p>
+                <div class="services__btn">
+                    <button class="get-started-btn">Get Started</button>
+                </div>
+            </div>
+
+            <div class="services__card" data-feature="Progress">
+                <div class="icon-box"><i class="fa-solid fa-chart-pie"></i></div>
+                <h2 class="pop-bounce">Progress</h2>
+                <p>Watch your success grow with charts.</p>
+                <div class="services__btn">
+                    <button class="get-started-btn">Get Started</button>
+                </div>
+            </div>
+
+            <div class="services__card" data-feature="Categories">
+                <div class="icon-box"><i class="fa-solid fa-layer-group"></i></div>
+                <h2 class="pop-bounce">Categories</h2>
+                <p>Organize your life into school, work, and health.</p>
+                <div class="services__btn">
+                    <button class="get-started-btn">Get Started</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!--Footer-->
+    <div class="footer__container">
+        <!-- your footer code -->
+    </div>
+
+    <script src="web.js"></script>
+
+    <!-- Modal -->
+<div id="setup-modal" class="modal-overlay hidden">
+  <div class="signup-form--card">
+    <span class="close-btn" style="cursor:pointer;position:absolute;top:15px;right:20px;font-size:2rem;color:#fff;">&times;</span>
+    <h2 id="modal-title"></h2>
+    <p id="modal-description"></p>
+    <form id="feature-setup-form"></form>
+  </div>
+</div>
+
+</body>
+</html>
